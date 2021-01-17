@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Details</title>
+</head>
+<body>
+        <center><h1>Client Page</h1></center>
+        <a href="/client/logout/" style=""><p style="text-align:right;"> Logout</p></a><br>
+
+        Token Id : {{token}}<br><br>
+        <form action="/upload/{{token}}" method="post" enctype="multipart/form-data">
+            Upload File : <input type="file" name="file"><br><br>
+            <input type="submit">
+        </form>
+<br>
+<br>
+        <form action="/data/{{token}}" method="post">
+            <input type="hidden" name="file" value="{{file}}"><br>
+            <input type="submit" value="Download Question Format File">
+        </form>
+</body>
+</html>

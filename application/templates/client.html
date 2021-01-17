@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style>
+
+.table td {
+   text-align: center;
+}
+.table th {
+   text-align: center;
+}
+    </style>
+</head>
+<body>
+    <center><br><h1>Client Registration</h1></center>
+    <p style="color:red">&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{{resp}}</p>
+        <form action="/client/registration/" method="post"><br>
+            <div class="form-group">
+      <label class="control-label col-sm-2">Client Fullname :</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control"  placeholder="Full name" name="name" value="">
+      </div>
+            </div><br><br>
+            <div class="form-group">
+      <label class="control-label col-sm-2">Client E-mail :</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control"  placeholder="Enter Email" name="email" value="">
+      </div>
+            </div><br><br>
+            <div class="form-group">
+      <label class="control-label col-sm-2">Client username :</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control"  placeholder="Enter username" name="username" value="">
+      </div>
+            </div><br><br>
+            <div class="form-group">
+      <label class="control-label col-sm-2">Client password :</label>
+      <div class="col-sm-4">
+        <input type="password" class="form-control"  placeholder="Enter password" name="password" value="">
+      </div>
+            </div><br><br>
+
+
+        <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>&nbsp; &nbsp;
+            <a href="/client/login/" ><button type="button" class="btn btn-success">Go To Login</button></a>
+      </div>
+
+
+
+        </form><br><br><br>
+
+</body>
+</html>

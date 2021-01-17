@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Questions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+
+.table td {
+   text-align: center;
+}
+.table th {
+   text-align: center;
+}
+    </style>
+</head>
+<body>
+        <center><h1>Client Questions</h1></center>
+
+
+
+
+        <div class="bs-example">
+    <table class="table" border="1">
+        <thead class="thead-dark">
+               <tr> <th>Client Id</th> <th>Client Full Name</th> <th>Client Email</th> <th>Client Questions</th><th>Action</th>
+            </tr></thead>
+            <tbody>
+                {% for clnt in clntlist %}
+                    <tr>
+                        <td><br><b>{{clnt.id}}</b></td>
+                        <td><br><b>{{clnt.fullname}}</b></td>
+                        <td><br><b>{{clnt.email}}</b></td>
+                        <td>{%for que in clnt.questions%}
+                                    {{que.id}}-{{que.question}} &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+                                    1){{que.option1}} &nbsp; &nbsp; &nbsp; 2){{que.option2}} &nbsp; &nbsp; &nbsp;
+                                3){{que.option3}} &nbsp; &nbsp; &nbsp; 4){{que.option4}}
+                                &nbsp; &nbsp; &nbsp; ans={{que.answer}} &nbsp; &nbsp; &nbsp;
+                            <br><a href="#"><button type="button" class="btn btn-outline-success">EDIT</button></a>
+                            <a href="#"><button type="button" class="btn btn-outline-danger">DELETE</button></a>
+                            <br><br>
+                                {% endfor %}
+                        </td>
+                        <td>
+                            <br><a href="#"><button type="button" class="btn btn-outline-success">EDIT</button></a>
+                            <a href="#"><button type="button" class="btn btn-outline-danger">DELETE</button></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</div>
+</body>
+</html>

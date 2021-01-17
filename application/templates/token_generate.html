@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Token Generation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body><center><h1>Token Generator</h1>
+<br><br>
+    <form action="/client/generate_token/" method="post">
+    <input type="hidden" name="username" value="{{username}}"><br>
+    <input type="hidden" name="password" value="{{password}}"><br>
+    <input type="submit" class="btn btn-primary" value="Generate Token"><br><br>
+    </form>
+<p>&nbsp;&nbsp;&nbsp;User Token Id : {{token}}</p>
+<br><br><br>
+<a href="/client/login/" ><button type="button" class="btn btn-success">Go To Login</button></a>
+</center>
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question</title>
+</head>
+<body>
+        <center><h1>All Questions</h1></center>
+        <a href="/student/logout/"><p style="text-align:right;"> Logout</p></a>
+        <br><br><br>
+
+
+        <form action="/student/question/{{clid}}" method="post">
+             {% for i in l %}
+            Q{{questionlist[i].qusId}} -   {{questionlist[i].qusName}}<br><br>
+              <input type="radio" id="op1" name="{{i}}" value="{{questionlist[i].qusA}}">
+              <label for="op1">{{questionlist[i].qusA}}</label>
+              <input type="radio" id="op2" name="{{i}}" value="{{questionlist[i].qusB}}">
+              <label for="op2">{{questionlist[i].qusB}}</label>
+              <input type="radio" id="op3" name="{{i}}" value="{{questionlist[i].qusC}}">
+              <label for="op3">{{questionlist[i].qusC}}</label>
+              <input type="radio" id="op4" name="{{i}}" value="{{questionlist[i].qusD}}">
+              <label for="op4">{{questionlist[i].qusD}}</label><br><br>
+            {% endfor %}<br>
+            <input type="submit">
+        </form>
+
+
+</body>
+</html>
